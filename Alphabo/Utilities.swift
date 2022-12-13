@@ -21,5 +21,7 @@ extension ClosedRange where Bound == String {
     }
 }
 
-// for easy throwing 
+// for easy throwing
 extension String: Error {}
+
+

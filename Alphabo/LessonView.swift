@@ -10,15 +10,8 @@ import AVFoundation
 
 struct LessonView: View {
     
-    init() {
-        let fontName = "Krungthep"
-        self.fontLarge = .custom(fontName, size: 270)
-        self.fontSmall = .custom(fontName, size: 210)
-    }
-    
     let letters = "abcdefghijklmnopqrstuvwxyz".uppercased().map { String($0) }
-    let fontLarge: Font
-    let fontSmall: Font
+    
     
     @StateObject
     var vm = LessonViewModel()
@@ -29,21 +22,7 @@ struct LessonView: View {
         GeometryReader { proxy in
             TabView(selection: $selectedTab) {
                 ForEach(Array(letters.enumerated()), id: \.offset) { index, letter in
-                    VStack {
-                        HStack(alignment: .bottom) {
-                            Group {
-                                Text(letter)
-                                    .font(fontLarge)
-                                +
-                                Text(letter.lowercased())
-                                    .font(fontSmall)
-                            }
-                            .scaledToFill()
-                            .kerning(-10)
-                           
-                        }
-                    }
-                    .background(Color.red)
+                    LetterView(letter: letter)
                     .tag(index)
                 }
                 .rotationEffect(.degrees(-90))
@@ -51,7 +30,6 @@ struct LessonView: View {
                     width: proxy.size.width,
                     height: proxy.size.height
                 )
-                .background(Color.green)
             }
             .frame(
                 width: proxy.size.height,
@@ -69,6 +47,37 @@ struct LessonView: View {
                     } catch {
                     }
                 }
+            }
+        }
+    }
+}
+
+struct LetterView: View {
+    let letter: String
+    
+    let fontLarge: Font
+    let fontSmall: Font
+    
+    init(letter: String) {
+        let fontName = "Krungthep"
+        self.letter = letter
+        self.fontLarge = .custom(fontName, size: 270)
+        self.fontSmall = .custom(fontName, size: 210)
+    }
+    
+    var body: some View {
+        VStack {
+            HStack(alignment: .bottom) {
+                Group {
+                    Text(letter)
+                        .font(fontLarge)
+                    +
+                    Text(letter.lowercased())
+                        .font(fontSmall)
+                }
+                .scaledToFill()
+                .kerning(-10)
+               
             }
         }
     }
