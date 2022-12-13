@@ -20,3 +20,6 @@ extension ClosedRange where Bound == String {
         return (lower...upper).toArray()
     }
 }
+
+// for easy throwing 
+extension String: Error {}
