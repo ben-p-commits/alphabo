@@ -7,23 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08041266293FDB7200930C1A /* AlphaboApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08041265293FDB7200930C1A /* AlphaboApp.swift */; };
-		08041268293FDB7200930C1A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08041267293FDB7200930C1A /* ContentView.swift */; };
-		0804126A293FDB7300930C1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08041269293FDB7300930C1A /* Assets.xcassets */; };
-		0804126D293FDB7300930C1A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0804126C293FDB7300930C1A /* Preview Assets.xcassets */; };
+		08041281293FDCC800930C1A /* AlphaboApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08041280293FDCC800930C1A /* AlphaboApp.swift */; };
+		08041283293FDCC800930C1A /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08041282293FDCC800930C1A /* LessonView.swift */; };
+		08041285293FDCC900930C1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08041284293FDCC900930C1A /* Assets.xcassets */; };
+		08041288293FDCC900930C1A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08041287293FDCC900930C1A /* Preview Assets.xcassets */; };
+		08A453AC293FDE0E00199650 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A453AB293FDE0E00199650 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		08041262293FDB7200930C1A /* Alphabo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alphabo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		08041265293FDB7200930C1A /* AlphaboApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaboApp.swift; sourceTree = "<group>"; };
-		08041267293FDB7200930C1A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		08041269293FDB7300930C1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0804126C293FDB7300930C1A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0804126E293FDB7300930C1A /* Alphabo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Alphabo.entitlements; sourceTree = "<group>"; };
+		0804127D293FDCC800930C1A /* Alphabo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alphabo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		08041280293FDCC800930C1A /* AlphaboApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaboApp.swift; sourceTree = "<group>"; };
+		08041282293FDCC800930C1A /* LessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonView.swift; sourceTree = "<group>"; };
+		08041284293FDCC900930C1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		08041287293FDCC900930C1A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		08A453AB293FDE0E00199650 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0804125F293FDB7200930C1A /* Frameworks */ = {
+		0804127A293FDCC800930C1A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,38 +34,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		08041259293FDB7200930C1A = {
+		08041274293FDCC800930C1A = {
 			isa = PBXGroup;
 			children = (
-				08041264293FDB7200930C1A /* Alphabo */,
-				08041263293FDB7200930C1A /* Products */,
+				0804127F293FDCC800930C1A /* Alphabo */,
+				0804127E293FDCC800930C1A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		08041263293FDB7200930C1A /* Products */ = {
+		0804127E293FDCC800930C1A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				08041262293FDB7200930C1A /* Alphabo.app */,
+				0804127D293FDCC800930C1A /* Alphabo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		08041264293FDB7200930C1A /* Alphabo */ = {
+		0804127F293FDCC800930C1A /* Alphabo */ = {
 			isa = PBXGroup;
 			children = (
-				08041265293FDB7200930C1A /* AlphaboApp.swift */,
-				08041267293FDB7200930C1A /* ContentView.swift */,
-				08041269293FDB7300930C1A /* Assets.xcassets */,
-				0804126E293FDB7300930C1A /* Alphabo.entitlements */,
-				0804126B293FDB7300930C1A /* Preview Content */,
+				08041280293FDCC800930C1A /* AlphaboApp.swift */,
+				08041282293FDCC800930C1A /* LessonView.swift */,
+				08A453AB293FDE0E00199650 /* Utilities.swift */,
+				08041284293FDCC900930C1A /* Assets.xcassets */,
+				08041286293FDCC900930C1A /* Preview Content */,
 			);
 			path = Alphabo;
 			sourceTree = "<group>";
 		};
-		0804126B293FDB7300930C1A /* Preview Content */ = {
+		08041286293FDCC900930C1A /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				0804126C293FDB7300930C1A /* Preview Assets.xcassets */,
+				08041287293FDCC900930C1A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -72,13 +73,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		08041261293FDB7200930C1A /* Alphabo */ = {
+		0804127C293FDCC800930C1A /* Alphabo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 08041271293FDB7300930C1A /* Build configuration list for PBXNativeTarget "Alphabo" */;
+			buildConfigurationList = 0804128B293FDCC900930C1A /* Build configuration list for PBXNativeTarget "Alphabo" */;
 			buildPhases = (
-				0804125E293FDB7200930C1A /* Sources */,
-				0804125F293FDB7200930C1A /* Frameworks */,
-				08041260293FDB7200930C1A /* Resources */,
+				08041279293FDCC800930C1A /* Sources */,
+				0804127A293FDCC800930C1A /* Frameworks */,
+				0804127B293FDCC800930C1A /* Resources */,
 			);
 			buildRules = (
 			);
@@ -86,25 +87,25 @@
 			);
 			name = Alphabo;
 			productName = Alphabo;
-			productReference = 08041262293FDB7200930C1A /* Alphabo.app */;
+			productReference = 0804127D293FDCC800930C1A /* Alphabo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0804125A293FDB7200930C1A /* Project object */ = {
+		08041275293FDCC800930C1A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
-					08041261293FDB7200930C1A = {
+					0804127C293FDCC800930C1A = {
 						CreatedOnToolsVersion = 14.1;
 					};
 				};
 			};
-			buildConfigurationList = 0804125D293FDB7200930C1A /* Build configuration list for PBXProject "Alphabo" */;
+			buildConfigurationList = 08041278293FDCC800930C1A /* Build configuration list for PBXProject "Alphabo" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -112,42 +113,43 @@
 				en,
 				Base,
 			);
-			mainGroup = 08041259293FDB7200930C1A;
-			productRefGroup = 08041263293FDB7200930C1A /* Products */;
+			mainGroup = 08041274293FDCC800930C1A;
+			productRefGroup = 0804127E293FDCC800930C1A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				08041261293FDB7200930C1A /* Alphabo */,
+				0804127C293FDCC800930C1A /* Alphabo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		08041260293FDB7200930C1A /* Resources */ = {
+		0804127B293FDCC800930C1A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0804126D293FDB7300930C1A /* Preview Assets.xcassets in Resources */,
-				0804126A293FDB7300930C1A /* Assets.xcassets in Resources */,
+				08041288293FDCC900930C1A /* Preview Assets.xcassets in Resources */,
+				08041285293FDCC900930C1A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0804125E293FDB7200930C1A /* Sources */ = {
+		08041279293FDCC800930C1A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08041268293FDB7200930C1A /* ContentView.swift in Sources */,
-				08041266293FDB7200930C1A /* AlphaboApp.swift in Sources */,
+				08A453AC293FDE0E00199650 /* Utilities.swift in Sources */,
+				08041283293FDCC800930C1A /* LessonView.swift in Sources */,
+				08041281293FDCC800930C1A /* AlphaboApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		0804126F293FDB7300930C1A /* Debug */ = {
+		08041289293FDCC900930C1A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -197,17 +199,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		08041270293FDB7300930C1A /* Release */ = {
+		0804128A293FDCC900930C1A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -251,87 +253,96 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		08041272293FDB7300930C1A /* Debug */ = {
+		0804128C293FDCC900930C1A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Alphabo/Alphabo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Alphabo/Preview Content\"";
+				DEVELOPMENT_TEAM = F97724357R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.benpcommits.Alphabo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		08041273293FDB7300930C1A /* Release */ = {
+		0804128D293FDCC900930C1A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Alphabo/Alphabo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Alphabo/Preview Content\"";
+				DEVELOPMENT_TEAM = F97724357R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.benpcommits.Alphabo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0804125D293FDB7200930C1A /* Build configuration list for PBXProject "Alphabo" */ = {
+		08041278293FDCC800930C1A /* Build configuration list for PBXProject "Alphabo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0804126F293FDB7300930C1A /* Debug */,
-				08041270293FDB7300930C1A /* Release */,
+				08041289293FDCC900930C1A /* Debug */,
+				0804128A293FDCC900930C1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		08041271293FDB7300930C1A /* Build configuration list for PBXNativeTarget "Alphabo" */ = {
+		0804128B293FDCC900930C1A /* Build configuration list for PBXNativeTarget "Alphabo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				08041272293FDB7300930C1A /* Debug */,
-				08041273293FDB7300930C1A /* Release */,
+				0804128C293FDCC900930C1A /* Debug */,
+				0804128D293FDCC900930C1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 0804125A293FDB7200930C1A /* Project object */;
+	rootObject = 08041275293FDCC800930C1A /* Project object */;
 }

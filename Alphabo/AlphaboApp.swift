@@ -11,7 +11,7 @@ import SwiftUI
 struct AlphaboApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LessonView()
         }
     }
 }
