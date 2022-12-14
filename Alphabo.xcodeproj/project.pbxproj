@@ -11,6 +11,7 @@
 		08041283293FDCC800930C1A /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08041282293FDCC800930C1A /* LessonView.swift */; };
 		08041285293FDCC900930C1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08041284293FDCC900930C1A /* Assets.xcassets */; };
 		08041288293FDCC900930C1A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08041287293FDCC900930C1A /* Preview Assets.xcassets */; };
+		089AD6AC2949F96B00F71187 /* IrregularGradient in Frameworks */ = {isa = PBXBuildFile; productRef = 089AD6AB2949F96B00F71187 /* IrregularGradient */; };
 		08A453AC293FDE0E00199650 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A453AB293FDE0E00199650 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				089AD6AC2949F96B00F71187 /* IrregularGradient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +88,9 @@
 			dependencies = (
 			);
 			name = Alphabo;
+			packageProductDependencies = (
+				089AD6AB2949F96B00F71187 /* IrregularGradient */,
+			);
 			productName = Alphabo;
 			productReference = 0804127D293FDCC800930C1A /* Alphabo.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 08041274293FDCC800930C1A;
+			packageReferences = (
+				089AD6AA2949F96B00F71187 /* XCRemoteSwiftPackageReference "IrregularGradient" */,
+			);
 			productRefGroup = 0804127E293FDCC800930C1A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -343,6 +351,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		089AD6AA2949F96B00F71187 /* XCRemoteSwiftPackageReference "IrregularGradient" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/joogps/IrregularGradient";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		089AD6AB2949F96B00F71187 /* IrregularGradient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 089AD6AA2949F96B00F71187 /* XCRemoteSwiftPackageReference "IrregularGradient" */;
+			productName = IrregularGradient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 08041275293FDCC800930C1A /* Project object */;
 }

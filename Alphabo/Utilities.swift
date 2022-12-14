@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import SwiftUI
+import Gradients
 
 extension ClosedRange where Bound == UnicodeScalar {
     func toArray() -> [UnicodeScalar] {
@@ -24,4 +26,17 @@ extension ClosedRange where Bound == String {
 // for easy throwing
 extension String: Error {}
 
+import SwiftUI
+
+extension Color {
+    static var random: Color {
+        
+        let h = CGFloat.random(in: 0.1...1),
+            s = CGFloat.random(in: 0.4...1),
+            v = CGFloat.random(in: 0.5...1)
+        
+        let color = UIColor(hue: h, saturation: s, brightness: v, alpha: 1)
+        return Color(color)
+    }
+}
 
