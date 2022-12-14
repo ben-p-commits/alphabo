@@ -12,6 +12,7 @@ struct AlphaboApp: App {
     var body: some Scene {
         WindowGroup {
             LessonView()
+                .environmentObject(LessonViewModel())
         }
     }
 }

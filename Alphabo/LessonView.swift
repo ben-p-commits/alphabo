@@ -13,16 +13,15 @@ struct LessonView: View {
     let letters = "abcdefghijklmnopqrstuvwxyz".uppercased().map { String($0) }
     
     
-    @StateObject
-    var vm = LessonViewModel()
-    
-    @State private var selectedTab = 0
+    @EnvironmentObject
+    var vm: LessonViewModel
     
     var body: some View {
         GeometryReader { proxy in
-            TabView(selection: $selectedTab) {
+            TabView(selection: $vm.selectedIndex) {
                 ForEach(Array(letters.enumerated()), id: \.offset) { index, letter in
-                    LetterView(letter: letter)
+                    LetterView(letter: letter, index: index)
+                        .environmentObject(vm)
                     .tag(index)
                 }
                 .rotationEffect(.degrees(-90))
@@ -31,35 +30,41 @@ struct LessonView: View {
                     height: proxy.size.height
                 )
             }
+            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+            .onAppear(perform: play)
+            .onChange(of: vm.selectedIndex) { _ in play() }
+            // layout modifiers for vertical scrolling
             .frame(
                 width: proxy.size.height,
                 height: proxy.size.width
             )
             .rotationEffect(.degrees(90), anchor: .topLeading)
             .offset(x: proxy.size.width)
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-            .onChange(of: selectedTab) { newValue in
-                print("changed to \(newValue)")
-                
-                Task.init {
-                    do {
-                        try await vm.playLetter(letterIndex: selectedTab)
-                    } catch {
-                    }
-                }
-            }
+        }
+    }
+    
+    func play() {
+        Task.init {
+            try await vm.playLetter(letterIndex: vm.selectedIndex)
         }
     }
 }
 
 struct LetterView: View {
     let letter: String
+    let index: Int
     
     let fontLarge: Font
     let fontSmall: Font
     
-    init(letter: String) {
+    @EnvironmentObject
+    var vm: LessonViewModel
+    
+    @State var appear = false
+    
+    init(letter: String, index: Int) {
         let fontName = "Krungthep"
+        self.index = index
         self.letter = letter
         self.fontLarge = .custom(fontName, size: 270)
         self.fontSmall = .custom(fontName, size: 210)
@@ -69,22 +74,62 @@ struct LetterView: View {
         VStack {
             HStack(alignment: .bottom) {
                 Group {
-                    Text(letter)
+                    Text(letter.uppercased())
                         .font(fontLarge)
                     +
                     Text(letter.lowercased())
                         .font(fontSmall)
                 }
-                .scaledToFill()
-                .kerning(-10)
-               
+                .shadow(radius: 4, x: 2, y: 2)
+                .fixedSize()
+                .scaleEffect(x: appear ? 1.0 : 1.4, y: appear ? 1.0 : 1.4)
+                .animation(.spring(response: 0.3, dampingFraction: 0.5), value: appear)
             }
         }
+        .onAppear {
+            if index == 0 {
+                appear = true
+            }
+        }
+        .onChange(of: vm.selectedIndex, perform: { newValue in
+            appear = (newValue == index)
+        })
+    }
+}
+
+struct LetterView_Previews: PreviewProvider {
+    static var previews: some View {
+        TabView {
+            LetterView(letter: "w", index: 0)
+            LetterView(letter: "m", index: 1)
+            LetterView(letter: "y", index: 2)
+        }.tabViewStyle(.page)
+            .environmentObject(LessonViewModel())
     }
 }
 
 class LessonViewModel: NSObject, ObservableObject{
-    private var players: [AVAudioPlayer] = []
+    @Published var selectedIndex = 0
+    
+    private var players: [AVAudioPlayer]
+    private let synthesizer: AVSpeechSynthesizer
+    
+    override init() {
+        self.selectedIndex = 0
+        self.players = [AVAudioPlayer]()
+        self.synthesizer = AVSpeechSynthesizer()
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback)
+        } catch(let error) {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func playUtterance(letter: String) async {
+        let utterance = AVSpeechUtterance(string: "'\(letter)'")
+        utterance.voice = AVSpeechSynthesisVoice(language: Locale.current.language.languageCode?.identifier)
+        synthesizer.speak(utterance)
+    }
     
     func playLetter(letterIndex: Int) async throws {
         
@@ -93,10 +138,11 @@ class LessonViewModel: NSObject, ObservableObject{
             throw "audio asset not found: \(filename)"
         }
         do {
+            
             // create new one, set delegate for cleanup.
             let player = try AVAudioPlayer(data: audioData)
             player.delegate = self
-            
+
             players.append(player)
             players.last?.play()
         } catch {
@@ -106,6 +152,7 @@ class LessonViewModel: NSObject, ObservableObject{
 }
 
 extension LessonViewModel: AVAudioPlayerDelegate {
+    
     // when a player finishes, remove it.
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) { clearPlayer(player) }
     
@@ -124,6 +171,7 @@ extension LessonViewModel: AVAudioPlayerDelegate {
 struct LessonView_Previews: PreviewProvider {
     static var previews: some View {
         LessonView()
+            .environmentObject(LessonViewModel())
     }
 }
 
