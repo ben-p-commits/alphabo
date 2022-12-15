@@ -7,7 +7,6 @@
 
 import Foundation
 import SwiftUI
-import Gradients
 
 extension ClosedRange where Bound == UnicodeScalar {
     func toArray() -> [UnicodeScalar] {
