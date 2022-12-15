@@ -67,17 +67,16 @@ struct ProgressionView: View {
                     ForEach(Array(vm.letters.enumerated()), id: \.offset) { index, letter in
                         Circle()
                             .fill(.blue.opacity(index == vm.selectedIndex ? 0.2 : 0))
-                            .frame(height: 32)
+                            .frame(height: geo.size.height / CGFloat(vm.letters.count))
                             .overlay(
                                 Text(letter)
-                                    .font(index == vm.selectedIndex ? .headline : .body)
                             )
                         Spacer()
                     }
                 }
             }
             .animation(.easeOut, value: vm.selectedIndex)
-            .offset(y: (geo.size.height / 2.0) - offsetStepSize(height: geo.size.height))
+            .offset(y: (geo.size.height / 3.0) - offsetStepSize(height: geo.size.height))
         }
         .padding(.horizontal, 4)
     }
