@@ -49,7 +49,7 @@ struct LessonView: View {
     
     func play() {
         Task.init {
-//            try await vm.playLetter(letterIndex: vm.selectedIndex)
+            try await vm.playLetter(letterIndex: vm.selectedIndex)
         }
     }
 }
