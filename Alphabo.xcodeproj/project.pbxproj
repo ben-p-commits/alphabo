@@ -12,6 +12,7 @@
 		08041285293FDCC900930C1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08041284293FDCC900930C1A /* Assets.xcassets */; };
 		08041288293FDCC900930C1A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08041287293FDCC900930C1A /* Preview Assets.xcassets */; };
 		089AD6AC2949F96B00F71187 /* IrregularGradient in Frameworks */ = {isa = PBXBuildFile; productRef = 089AD6AB2949F96B00F71187 /* IrregularGradient */; };
+		089AD6AE294A007A00F71187 /* LetterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089AD6AD294A007A00F71187 /* LetterView.swift */; };
 		08A453AC293FDE0E00199650 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A453AB293FDE0E00199650 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +22,7 @@
 		08041282293FDCC800930C1A /* LessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonView.swift; sourceTree = "<group>"; };
 		08041284293FDCC900930C1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08041287293FDCC900930C1A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		089AD6AD294A007A00F71187 /* LetterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterView.swift; sourceTree = "<group>"; };
 		08A453AB293FDE0E00199650 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,6 +59,7 @@
 			children = (
 				08041280293FDCC800930C1A /* AlphaboApp.swift */,
 				08041282293FDCC800930C1A /* LessonView.swift */,
+				089AD6AD294A007A00F71187 /* LetterView.swift */,
 				08A453AB293FDE0E00199650 /* Utilities.swift */,
 				08041284293FDCC900930C1A /* Assets.xcassets */,
 				08041286293FDCC900930C1A /* Preview Content */,
@@ -150,6 +153,7 @@
 			files = (
 				08A453AC293FDE0E00199650 /* Utilities.swift in Sources */,
 				08041283293FDCC800930C1A /* LessonView.swift in Sources */,
+				089AD6AE294A007A00F71187 /* LetterView.swift in Sources */,
 				08041281293FDCC800930C1A /* AlphaboApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
