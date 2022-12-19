@@ -23,7 +23,7 @@ struct LessonView: View {
                     ForEach(Array(vm.letters.enumerated()), id: \.offset) { index, letter in
                         LetterView(letter: letter, index: index)
                             .environmentObject(vm)
-                        .tag(index)
+                            .tag(index)
                     }
                     .rotationEffect(.degrees(-90))
                     .frame(
@@ -122,7 +122,7 @@ class LessonViewModel: NSObject, ObservableObject{
             // create new one, set delegate for cleanup.
             let player = try AVAudioPlayer(data: audioData)
             player.delegate = self
-
+            
             players.append(player)
             players.last?.play()
         } catch {
